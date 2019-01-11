@@ -27,9 +27,9 @@ class MusicLibraryController
     elsif input == "list genres"
       list_genres
     elsif input == "list artist"
-      list_artist
+      list_songs_by_artist
     elsif input == "list genre"
-      list_genre
+      list_songs_by_genre
     elsif input == "play song"
       play_song
     end
@@ -48,7 +48,7 @@ class MusicLibraryController
     Genre.all.sort {|a,b| a.name <=> b.name}.each_with_index{|genre, index| puts "#{index + 1}. #{genre.name}"}
   end
 
-  def list_artist
+  def list_songs_by_artist
   end
 
   def list_genre

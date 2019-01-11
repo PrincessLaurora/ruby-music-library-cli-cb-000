@@ -70,7 +70,7 @@ class MusicLibraryController
     input = gets.chomp.to_i
     if (1..Song.all.length).include?(input)
     matched_song = Song.all.sort {|a,b| a.name <=> b.name}[input - 1]
-    puts "Playing #{matched_song.name}by #{matched_song.artist.name}"
+    puts "Playing #{matched_song.name} by #{matched_song.artist.name}"
     end
   end
 

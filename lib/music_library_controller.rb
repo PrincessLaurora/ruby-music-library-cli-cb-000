@@ -1,5 +1,7 @@
 class MusicLibraryController
 
+  attr_reader :songs
+
   def initialize(path = "./db/mp3s")
     MusicImporter.new(path).import
   end
@@ -52,6 +54,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.chomp
     while input == Artist.name
+      Artist.map 
     Artist.songs.sort {|a,b| a.name <=> b.name}.each_with_index{|song, index| puts "#{index + 1}. #{song.name} - #{song.genre.name}"}
     end
   end

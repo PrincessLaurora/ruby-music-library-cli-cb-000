@@ -21,18 +21,18 @@ class MusicLibraryController
       input = gets.chomp
     end
 
-    case input 
-    when  "list songs"
+    case input
+    when "list songs"
       list_songs
-    elsif input == "list artists"
+    when "list artists"
       list_artists
-    elsif input == "list genres"
+    when "list genres"
       list_genres
-    elsif input == "list artist"
+    when "list artist"
       list_songs_by_artist
-    elsif input == "list genre"
+    when "list genre"
       list_songs_by_genre
-    elsif input == "play song"
+    when "play song"
       play_song
     end
 
@@ -75,6 +75,6 @@ class MusicLibraryController
     end
   end
 
-  
+
 
 end

@@ -21,7 +21,8 @@ class MusicLibraryController
       input = gets.chomp
     end
 
-    if input == "list songs"
+    case input 
+    when  "list songs"
       list_songs
     elsif input == "list artists"
       list_artists
